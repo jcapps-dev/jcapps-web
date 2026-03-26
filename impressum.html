@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum — JCApps</title>
+    <link rel="stylesheet" href="assets/fonts.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .legal-page {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+        }
+        .legal-page h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+        .legal-page .subtitle {
+            font-size: 14px;
+            color: var(--text-subtle);
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+        .legal-page h2 {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-subtle);
+            margin: 32px 0 8px;
+        }
+        .legal-page p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+        .legal-page a { color: var(--accent); }
+        .legal-page a:hover { text-decoration: underline; }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            transition: color 0.15s ease;
+        }
+        .back-link:hover { color: var(--text); }
+    </style>
+</head>
+<body>
+    <nav id="nav" class="scrolled">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-jc">jc</span><span class="logo-apps">apps</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="legal-page">
+        <a href="index.html" class="back-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            Back to jcapps.dev
+        </a>
+
+        <h1>Impressum</h1>
+        <p class="subtitle">Angaben gemäß § 5 TMG</p>
+
+        <h2>Betreiber</h2>
+        <p>JCApps<br>
+        Deutschland</p>
+
+        <h2>Kontakt</h2>
+        <p>E-Mail: <a href="mailto:hello@jcapps.dev">hello@jcapps.dev</a></p>
+
+        <h2>Hinweis</h2>
+        <p>JCApps ist ein privates Open-Source-Projekt ohne kommerzielle Absicht.
+        Die hier angebotenen Tools sind kostenlos und werden ohne Gewinnerzielungsabsicht entwickelt.</p>
+    </div>
+</body>
+</html>

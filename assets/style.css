@@ -780,6 +780,11 @@ ul { list-style: none; }
     font-size: 12px;
     color: var(--text-subtle);
 }
+.footer-bottom a {
+    color: var(--text-subtle);
+    transition: color 0.15s ease;
+}
+.footer-bottom a:hover { color: var(--text-muted); }
 
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media (max-width: 900px) {
