@@ -17,12 +17,13 @@
     --accent-bg:     #f0fdf4;
     --accent-border: #bbf7d0;
 
-    --radius-sm: 6px;
-    --radius:    10px;
-    --radius-lg: 16px;
-    --radius-xl: 20px;
+    --radius-sm: 2px;
+    --radius:    2px;
+    --radius-lg: 4px;
+    --radius-xl: 4px;
 
-    --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font:      'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
     --transition: 0.15s ease;
     --transition-slow: 0.4s ease;
 }
@@ -183,7 +184,7 @@ ul { list-style: none; }
     align-items: center;
     gap: 6px;
     padding: 7px 14px;
-    border-radius: var(--radius);
+    border-radius: 0;
     border: 1px solid var(--border);
     color: var(--text-muted) !important;
     transition: var(--transition) !important;
@@ -215,14 +216,14 @@ ul { list-style: none; }
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 5px 12px;
-    border-radius: 100px;
-    border: 1px solid var(--accent-border);
-    background: var(--accent-bg);
-    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 0;
+    background: var(--accent);
+    font-size: 11px;
     font-weight: 500;
-    color: var(--accent);
-    letter-spacing: 0.3px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
     margin-bottom: 32px;
 }
 
@@ -453,10 +454,11 @@ ul { list-style: none; }
     flex: 1;
     text-align: center;
     font-size: 11px;
+    font-family: var(--font-mono);
     color: var(--text-subtle);
     background: var(--bg-card);
     padding: 3px 12px;
-    border-radius: 6px;
+    border-radius: 2px;
     border: 1px solid var(--border);
     margin: 0 8px;
 }
@@ -523,7 +525,7 @@ ul { list-style: none; }
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-family: monospace;
+    font-family: var(--font-mono);
 }
 
 .mockup-copy-btn {
@@ -535,7 +537,7 @@ ul { list-style: none; }
     padding: 3px 10px;
     border-radius: 6px;
     cursor: pointer;
-    font-family: var(--font);
+    font-family: var(--font-mono);
     flex-shrink: 0;
 }
 
@@ -582,13 +584,13 @@ ul { list-style: none; }
     position: absolute;
     top: 20px; right: 20px;
     font-size: 10px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--text-subtle);
     border: 1px solid var(--border);
     padding: 3px 8px;
-    border-radius: 100px;
+    border-radius: 0;
     background: var(--bg-surface);
 }
 
@@ -649,17 +651,17 @@ ul { list-style: none; }
 }
 
 .philosophy-card {
-    padding: 36px;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border);
-    background: var(--bg-card);
+    padding: 28px 0 36px;
+    border-radius: 0;
+    border: none;
+    border-top: 2px solid var(--border);
+    background: transparent;
     position: relative;
-    transition: border-color var(--transition), box-shadow var(--transition);
+    transition: border-color var(--transition);
 }
 
 .philosophy-card:hover {
-    border-color: var(--border-strong);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    border-top-color: var(--accent);
 }
 
 .philosophy-number {
