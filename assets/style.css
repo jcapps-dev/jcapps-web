@@ -73,11 +73,23 @@ ul { list-style: none; }
 .reveal:nth-child(3) { transition-delay: 0.16s; }
 .reveal:nth-child(4) { transition-delay: 0.24s; }
 
+/* ─── TOP ACCENT LINE ────────────────────────────────────── */
+body::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: var(--accent);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 200;
+}
+
 /* ─── GRADIENT TEXT ──────────────────────────────────────── */
 .gradient-text {
-    color: var(--accent-mid);
-    background: none;
-    -webkit-text-fill-color: unset;
+    background: linear-gradient(135deg, var(--accent) 0%, #0d9488 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* ─── BUTTONS ────────────────────────────────────────────── */
@@ -202,6 +214,10 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--border);
+    background-image:
+        linear-gradient(rgba(163,157,147,0.25) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(163,157,147,0.25) 1px, transparent 1px);
+    background-size: 40px 40px;
 }
 
 .hero-content {
@@ -555,7 +571,16 @@ ul { list-style: none; }
 }
 
 .mockup-glow {
-    display: none;
+    display: block;
+    position: absolute;
+    bottom: -48px;
+    right: -32px;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(ellipse, rgba(22,101,52,0.13) 0%, transparent 68%);
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 50%;
 }
 
 /* Products grid */
@@ -603,8 +628,8 @@ ul { list-style: none; }
     margin-bottom: 16px;
 }
 
-.shift-icon  { background: #fdf4ff; color: #7c3aed; border: 1px solid #e9d5ff; }
-.board-icon  { background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; }
+.shift-icon  { background: var(--accent-bg); color: var(--accent); border: 1px solid var(--accent-border); }
+.board-icon  { background: var(--accent-bg); color: var(--accent); border: 1px solid var(--accent-border); }
 
 .product-card h3 {
     font-size: 22px;
@@ -665,13 +690,20 @@ ul { list-style: none; }
 }
 
 .philosophy-number {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: -2px;
     color: var(--accent);
-    opacity: 0.8;
-    margin-bottom: 20px;
+    opacity: 0.10;
+    margin-bottom: 8px;
+    line-height: 1;
+    font-family: var(--font-mono);
     font-variant-numeric: tabular-nums;
+}
+
+.philosophy-card:hover .philosophy-number {
+    opacity: 0.18;
+    transition: opacity 0.2s ease;
 }
 
 .philosophy-card h4 {
@@ -688,17 +720,50 @@ ul { list-style: none; }
     line-height: 1.7;
 }
 
+/* ─── ROADMAP DIVIDER ────────────────────────────────────── */
+.roadmap-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 40px 0 20px;
+    color: var(--text-subtle);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.roadmap-divider::before,
+.roadmap-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
 /* ─── NOTIFY ─────────────────────────────────────────────── */
 .notify {
     padding: 120px 0;
 }
 
 .notify-box {
-    background: var(--accent-bg);
-    border: 1px solid var(--accent-border);
+    background: var(--text);
+    border: none;
     border-radius: var(--radius-lg);
     padding: 72px 60px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.notify-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
 }
 
 .notify-box h2 {
@@ -706,18 +771,21 @@ ul { list-style: none; }
     font-weight: 800;
     letter-spacing: -1.5px;
     margin-bottom: 12px;
-    color: var(--text);
+    color: #ffffff;
+    position: relative;
 }
 
 .notify-box p {
     font-size: 16px;
-    color: var(--text-muted);
+    color: rgba(255,255,255,0.55);
     margin-bottom: 32px;
+    position: relative;
 }
 
 .notify-box .btn {
     padding: 12px 28px;
     font-size: 15px;
+    position: relative;
 }
 
 /* ─── FOOTER ─────────────────────────────────────────────── */
