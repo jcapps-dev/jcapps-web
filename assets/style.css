@@ -1010,6 +1010,11 @@ body::before {
 
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media (max-width: 900px) {
+    .products       { padding: 80px 0; }
+    .philosophy     { padding: 80px 0; }
+    .built-section  { padding: 80px 0; }
+    .notify         { padding: 80px 0; }
+
     .product-featured {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -1022,22 +1027,54 @@ body::before {
 
     .philosophy-grid { grid-template-columns: 1fr; }
 
-    .built-inner { grid-template-columns: 1fr; gap: 48px; }
+    .built-inner { grid-template-columns: 1fr; gap: 40px; }
 
     .footer-inner { flex-direction: column; }
     .footer-links { gap: 32px; }
 }
 
 @media (max-width: 640px) {
-    .hero-headline { letter-spacing: -2px; }
+    /* Sections */
+    .products       { padding: 56px 0; }
+    .philosophy     { padding: 56px 0; }
+    .built-section  { padding: 56px 0; }
+    .notify         { padding: 56px 0; }
+    .footer         { padding: 40px 0 24px; }
 
+    /* Hero */
+    .hero-content   { padding-top: 80px; padding-bottom: 56px; }
+    .hero-headline  { letter-spacing: -2px; }
+    .hero-brand     { font-size: 18px; }
+    .hero-terminal  { display: block; width: 100%; box-sizing: border-box; overflow-x: auto; font-size: 12px; line-height: 1.8; }
+    .hero-actions   { flex-direction: column; }
+    .hero-actions .btn { width: 100%; justify-content: center; }
+
+    /* Nav */
     .nav-links a:not(.nav-github) { display: none; }
+    .nav-github { display: none; }
 
-    .notify-box { padding: 40px 24px; }
+    /* Cards */
+    .notify-box         { padding: 40px 24px; }
+    .product-featured   { padding: 24px; }
+    .product-card       { padding: 24px; }
+    .philosophy-card    { padding: 20px 0 28px; }
 
-    .product-featured { padding: 24px; }
-    .product-card { padding: 24px; }
-    .philosophy-card { padding: 24px; }
+    /* Terminals */
+    .hero-terminal,
+    .built-terminal .term-body { font-size: 12px; }
+    .built-terminal { overflow-x: auto; }
 
+    /* Section headers */
+    .section-header { margin-bottom: 40px; }
+    .section-header h2 { letter-spacing: -1.5px; }
+
+    /* Footer */
     .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    .footer-links  { flex-wrap: wrap; gap: 24px; }
+}
+
+@media (max-width: 400px) {
+    .hero-headline  { letter-spacing: -1.5px; }
+    .hero-terminal  { padding: 12px 14px; }
+    .product-featured { padding: 20px; }
 }
