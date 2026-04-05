@@ -31,21 +31,25 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "JCApps",
-      "url": "https://jcapps-dev.github.io/jcapps-web/",
-      "description": "Open-source, self-hosted web apps for small teams. No database, no Docker, no monthly fees.",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Any (PHP hosting)",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "JCApps",
+        "url": "https://jcapps-dev.github.io/jcapps-web/",
+        "logo": "https://jcapps-dev.github.io/jcapps-web/favicon.svg",
+        "email": "hello@jcapps.dev",
+        "description": "Open-source, self-hosted web apps for small teams.",
+        "sameAs": ["https://github.com/jcapps-dev"]
       },
-      "license": "https://opensource.org/licenses/MIT"
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "JCApps",
+        "url": "https://jcapps-dev.github.io/jcapps-web/",
+        "description": "Open-source web apps for small teams. No database, no Docker, no monthly fees. Upload to any PHP hosting and run in minutes."
+      }
+    ]
     </script>
 </head>
 <body>
