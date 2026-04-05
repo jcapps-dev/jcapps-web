@@ -12,10 +12,12 @@
     --text-muted:   #68635a;
     --text-subtle:  #aaa49a;
 
-    --accent:        #166534;
-    --accent-mid:    #15803d;
-    --accent-bg:     #f0fdf4;
-    --accent-border: #bbf7d0;
+    --accent:        #0f766e;
+    --accent-mid:    #0d9488;
+    --accent-bg:     #f0fdfa;
+    --accent-border: #99f6e4;
+
+    --gradient: linear-gradient(135deg, #0f766e 0%, #0891b2 100%);
 
     --radius-sm: 2px;
     --radius:    2px;
@@ -78,7 +80,7 @@ body::before {
     content: '';
     display: block;
     height: 3px;
-    background: var(--accent);
+    background: var(--gradient);
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 200;
@@ -86,7 +88,7 @@ body::before {
 
 /* ─── GRADIENT TEXT ──────────────────────────────────────── */
 .gradient-text {
-    background: linear-gradient(135deg, var(--accent) 0%, #0d9488 100%);
+    background: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -185,7 +187,12 @@ body::before {
 }
 .nav-logo:hover { opacity: 0.75; }
 
-.logo-jc   { color: var(--accent); }
+.logo-jc {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 .logo-slash { color: var(--border-strong); font-weight: 300; margin: 0 1px; }
 .logo-apps  { color: var(--text); font-weight: 400; }
 
@@ -241,7 +248,7 @@ body::before {
     gap: 8px;
     padding: 4px 10px;
     border-radius: 0;
-    background: var(--accent);
+    background: var(--gradient);
     font-size: 11px;
     font-weight: 500;
     color: #fff;
@@ -331,7 +338,10 @@ body::before {
     font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: var(--accent);
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 16px;
 }
 
