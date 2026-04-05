@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jcapps-dev.github.io/jcapps-web/sitemap.xml
+Sitemap: https://jcapps.dev/sitemap.xml
