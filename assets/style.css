@@ -176,7 +176,8 @@ body::before {
 
 .nav-logo {
     display: inline-flex;
-    align-items: baseline;
+    align-items: center;
+    gap: 8px;
     font-family: var(--font-mono);
     font-size: 17px;
     font-weight: 700;
@@ -186,6 +187,12 @@ body::before {
     transition: opacity var(--transition);
 }
 .nav-logo:hover { opacity: 0.75; }
+
+.nav-logo-mark {
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: block;
+}
 
 .logo-jc {
     background: var(--gradient);
