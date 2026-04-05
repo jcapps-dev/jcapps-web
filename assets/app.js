@@ -70,3 +70,19 @@ if (copyBtn) {
 document.querySelectorAll('.products-grid .product-card, .philosophy-grid .philosophy-card').forEach((card, i) => {
     card.style.transitionDelay = `${i * 0.08}s`;
 });
+
+// ─── MOCKUP TYPING ANIMATION ──────────────────────────────
+const mockupFilename = document.getElementById('mockup-filename');
+if (mockupFilename) {
+    let typed = false;
+    const typingObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !typed) {
+                typed = true;
+                setTimeout(() => mockupFilename.classList.add('typing'), 400);
+                typingObserver.disconnect();
+            }
+        });
+    }, { threshold: 0.5 });
+    typingObserver.observe(mockupFilename.closest('.mockup-window'));
+}

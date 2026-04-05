@@ -42,6 +42,11 @@
                 Open-source web apps for small teams. Upload to any PHP hosting,
                 run in minutes — no infrastructure, no subscriptions, no lock-in.
             </p>
+            <div class="hero-terminal reveal">
+                <span class="t-prompt">$</span> rsync -avz . deploy@host:/www/transfer/<br>
+                <span class="t-success">  ✓</span> <span class="t-dim">sent 1.2 MB in 0.9s — no build step required</span><br>
+                <span class="t-prompt">$</span> <span class="t-comment"># zero npm &nbsp;·&nbsp; zero composer &nbsp;·&nbsp; zero docker</span>
+            </div>
             <div class="hero-actions reveal">
                 <a href="#products" class="btn btn-primary">
                     Explore Tools
@@ -148,7 +153,7 @@
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
                                 </div>
                                 <div class="mockup-file-info">
-                                    <div class="mockup-file-name">Q1-Report-2026.pdf</div>
+                                    <div class="mockup-file-name" id="mockup-filename">Q1-Report-2026.pdf</div>
                                     <div class="mockup-file-size">4.2 MB</div>
                                 </div>
                                 <div class="mockup-file-status">
@@ -263,6 +268,42 @@
                     <div class="philosophy-number">03</div>
                     <h4>Built to last</h4>
                     <p>No framework dependencies that break with every update. Plain PHP, vanilla JS, and CSS that works in five years the same as it does today.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUILT WITH -->
+    <section class="built-section">
+        <div class="container">
+            <div class="built-inner">
+                <div class="built-text reveal">
+                    <div class="section-tag">Origin</div>
+                    <h2>Built with<br><span class="gradient-text">Claude Code.</span></h2>
+                    <p>jcapps started as internal tooling for a real manufacturing company — written collaboratively with Claude Code, in spare time, out of curiosity about what AI-assisted development can actually produce.</p>
+                    <p>Not a demo. Not a template. Real software, handling real data, running in production since early 2025.</p>
+                    <p class="built-closing">The tools worked well enough to share.</p>
+                </div>
+                <div class="built-terminal reveal">
+                    <div class="term-bar">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                        <span class="term-title">stack</span>
+                    </div>
+                    <div class="term-body">
+                        <div class="term-line"><span class="t-prompt">$</span> cat STACK.txt</div>
+                        <div class="term-output">PHP 8 &nbsp;·&nbsp; Flat-file JSON &nbsp;·&nbsp; Vanilla JS</div>
+                        <div class="term-output t-dim">No frameworks &nbsp;·&nbsp; No databases &nbsp;·&nbsp; Runs anywhere</div>
+                        <div class="term-spacer"></div>
+                        <div class="term-line"><span class="t-prompt">$</span> wc -l **/*.php | tail -1</div>
+                        <div class="term-output"><span class="t-success">15,444</span> <span class="t-dim">lines of PHP across 3 tools</span></div>
+                        <div class="term-spacer"></div>
+                        <div class="term-line"><span class="t-prompt">$</span> ls node_modules/</div>
+                        <div class="term-output t-error">ls: node_modules/: No such file or directory</div>
+                        <div class="term-spacer"></div>
+                        <div class="term-line"><span class="t-prompt">$</span> <span class="t-cursor">▋</span></div>
+                    </div>
                 </div>
             </div>
         </div>
