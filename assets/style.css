@@ -1055,7 +1055,8 @@ body::before {
 
     /* Cards */
     .notify-box         { padding: 40px 24px; }
-    .product-featured   { padding: 24px; }
+    .product-featured   { padding: 24px; overflow: visible; }
+    .mockup-glow        { display: none; }
     .product-card       { padding: 24px; }
     .philosophy-card    { padding: 20px 0 28px; }
 
