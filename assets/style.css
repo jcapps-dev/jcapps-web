@@ -962,11 +962,12 @@ body::before {
 }
 
 .claude-code-logo {
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
     image-rendering: pixelated;
-    margin-bottom: 16px;
-    display: block;
+    display: inline;
+    vertical-align: middle;
+    margin-left: 4px;
 }
 
 .built-terminal {
