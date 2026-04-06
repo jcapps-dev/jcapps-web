@@ -205,14 +205,14 @@ body::before {
     border-radius: 4px;
 }
 
-.logo-jc {
+.logo-prompt {
     background: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    margin-right: 3px;
 }
-.logo-slash { color: var(--border-strong); font-weight: 300; margin: 0 1px; }
-.logo-apps  { color: var(--text); font-weight: 400; }
+.logo-name { color: var(--text); font-weight: 400; }
 
 .nav-links {
     display: flex;
