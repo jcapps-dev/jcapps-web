@@ -206,13 +206,20 @@ body::before {
 }
 
 .logo-prompt {
+    color: #0f1117;
+    font-weight: 700;
+    margin-right: 2px;
+}
+.logo-name { color: var(--text); font-weight: 400; }
+.logo-tld {
     background: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-right: 3px;
+    font-weight: 300;
+    font-size: 0.82em;
+    letter-spacing: 0;
 }
-.logo-name { color: var(--text); font-weight: 400; }
 
 .nav-links {
     display: flex;
