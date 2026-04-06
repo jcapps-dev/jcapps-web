@@ -360,17 +360,6 @@ body::before {
     margin-bottom: 64px;
 }
 
-.origin-tag-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 16px;
-}
-
-.origin-tag-row .section-tag {
-    margin-bottom: 0;
-}
-
 .section-tag {
     display: inline-block;
     font-size: 11px;
@@ -973,12 +962,12 @@ body::before {
 }
 
 .claude-code-logo {
-    width: 18px;
-    height: 18px;
+    width: 0.65em;
+    height: 0.65em;
     image-rendering: pixelated;
     display: inline-block;
-    vertical-align: middle;
-    margin-right: 6px;
+    vertical-align: 0.1em;
+    margin-left: 0.2em;
 }
 
 .built-terminal {
