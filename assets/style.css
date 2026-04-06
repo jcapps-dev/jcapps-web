@@ -961,6 +961,14 @@ body::before {
     color: var(--text-subtle) !important;
 }
 
+.claude-code-logo {
+    width: 48px;
+    height: 48px;
+    image-rendering: pixelated;
+    margin-bottom: 16px;
+    display: block;
+}
+
 .built-terminal {
     background: #0f1117;
     border: 1px solid #2a2d35;
