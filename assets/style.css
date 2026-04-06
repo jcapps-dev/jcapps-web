@@ -361,7 +361,8 @@ body::before {
 }
 
 .section-tag {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -962,12 +963,12 @@ body::before {
 }
 
 .claude-code-logo {
-    width: 36px;
-    height: 36px;
+    width: 18px;
+    height: 18px;
     image-rendering: pixelated;
-    display: inline;
+    display: inline-block;
     vertical-align: middle;
-    margin-left: 4px;
+    margin-right: 6px;
 }
 
 .built-terminal {
