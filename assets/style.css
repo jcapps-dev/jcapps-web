@@ -360,9 +360,19 @@ body::before {
     margin-bottom: 64px;
 }
 
-.section-tag {
-    display: inline-flex;
+.origin-tag-row {
+    display: flex;
     align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.origin-tag-row .section-tag {
+    margin-bottom: 0;
+}
+
+.section-tag {
+    display: inline-block;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1.5px;
