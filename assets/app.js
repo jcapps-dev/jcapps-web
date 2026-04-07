@@ -66,18 +66,6 @@ if (copyBtn) {
     });
 }
 
-// ─── SCREENSHOT TABS ──────────────────────────────────────
-document.querySelectorAll('.ss-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-        const idx = tab.dataset.tab;
-        document.querySelectorAll('.ss-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
-        document.querySelectorAll('.ss-panel').forEach(p => p.classList.remove('active'));
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-        document.querySelector(`.ss-panel[data-panel="${idx}"]`).classList.add('active');
-    });
-});
-
 // ─── STAGGER PRODUCT CARDS ────────────────────────────────
 document.querySelectorAll('.products-grid .product-card, .philosophy-grid .philosophy-card').forEach((card, i) => {
     card.style.transitionDelay = `${i * 0.08}s`;
