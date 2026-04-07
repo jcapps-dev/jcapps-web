@@ -775,6 +775,51 @@ body::before {
     background: var(--bg-card);
 }
 
+.gallery-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    font-family: var(--font);
+    text-align: left;
+    transition: background var(--transition);
+}
+.gallery-header:hover { background: var(--bg-surface); }
+
+.gallery-header-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.gallery-chevron {
+    color: var(--text-subtle);
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+}
+.gallery-header[aria-expanded="false"] .gallery-chevron {
+    transform: rotate(180deg);
+}
+
+.gallery-body {
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: 600px;
+}
+.gallery-body.collapsed {
+    max-height: 0;
+}
+
 .gallery-chrome {
     display: flex;
     align-items: center;

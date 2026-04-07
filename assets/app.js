@@ -66,6 +66,17 @@ if (copyBtn) {
     });
 }
 
+// ─── GALLERY TOGGLE ───────────────────────────────────────
+const galleryToggle = document.getElementById('gallery-toggle');
+const galleryBody   = document.getElementById('gallery-body');
+if (galleryToggle && galleryBody) {
+    galleryToggle.addEventListener('click', () => {
+        const open = galleryToggle.getAttribute('aria-expanded') === 'true';
+        galleryToggle.setAttribute('aria-expanded', String(!open));
+        galleryBody.classList.toggle('collapsed', open);
+    });
+}
+
 // ─── SCREENSHOT GALLERY ───────────────────────────────────
 const galleryTrack  = document.getElementById('gallery-track');
 if (galleryTrack) {
