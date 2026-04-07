@@ -766,6 +766,70 @@ body::before {
     line-height: 1.7;
 }
 
+/* ─── SCREENSHOTS ────────────────────────────────────────── */
+.screenshots-section {
+    margin-top: 48px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.screenshots-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.screenshots-tabs::-webkit-scrollbar { display: none; }
+
+.ss-tab {
+    flex-shrink: 0;
+    padding: 12px 20px;
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: color var(--transition), border-color var(--transition);
+    margin-bottom: -1px;
+}
+.ss-tab:hover { color: var(--text); }
+.ss-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+.screenshots-viewer {
+    position: relative;
+}
+
+.ss-panel { display: none; }
+.ss-panel.active { display: block; }
+
+.ss-panel img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid var(--border);
+}
+
+.ss-caption {
+    padding: 14px 20px;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+.ss-caption code {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 1px 5px;
+    color: var(--accent);
+}
+
 /* ─── ROADMAP DIVIDER ────────────────────────────────────── */
 .roadmap-divider {
     display: flex;
