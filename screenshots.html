@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer — Screenshots · JCApps</title>
+    <meta name="description" content="Screenshots of jcapps-transfer — install, setup, admin dashboard, sharing and recipient download page.">
+    <link rel="canonical" href="https://jcapps.dev/screenshots.html">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="favicon-192.png">
+    <link rel="stylesheet" href="assets/fonts.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .ss-page { padding: 48px 0 96px; }
+        .ss-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            transition: color var(--transition);
+        }
+        .ss-back:hover { color: var(--text); }
+        .ss-page-header { margin-bottom: 48px; }
+        .ss-page-header .section-tag { margin-bottom: 10px; }
+        .ss-page-header h1 {
+            font-size: clamp(28px, 5vw, 40px);
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+        .ss-page-header p {
+            font-size: 16px;
+            color: var(--text-muted);
+            max-width: 480px;
+        }
+        .ss-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+        .ss-item {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--bg-card);
+        }
+        .ss-item-chrome {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 14px;
+            background: var(--bg-surface);
+            border-bottom: 1px solid var(--border);
+        }
+        .ss-item-chrome-dots { display: flex; gap: 5px; }
+        .ss-item-chrome-dots span {
+            width: 9px; height: 9px;
+            border-radius: 50%;
+            background: var(--border-strong);
+        }
+        .ss-item-chrome-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+        .ss-item-stage {
+            background: var(--bg-surface);
+            line-height: 0;
+        }
+        .ss-item-stage img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .ss-item-caption {
+            padding: 14px 18px;
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.55;
+            border-top: 1px solid var(--border);
+        }
+        .ss-item-caption code {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            padding: 1px 5px;
+            color: var(--accent);
+        }
+        .ss-cta {
+            margin-top: 56px;
+            padding: 32px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            background: var(--bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .ss-cta-text h2 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+        .ss-cta-text p  { font-size: 14px; color: var(--text-muted); }
+        .ss-cta-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner container">
+            <a href="index.html" class="nav-logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                JCApps
+            </a>
+            <div class="nav-links">
+                <a href="index.html#products">Products</a>
+                <a href="index.html#philosophy">Philosophy</a>
+                <a href="index.html#notify">Stay updated</a>
+                <a href="https://github.com/jcapps-dev" target="_blank" rel="noopener" class="nav-github">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="ss-page">
+            <div class="container">
+                <a href="index.html" class="ss-back">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    Back
+                </a>
+
+                <div class="ss-page-header">
+                    <div class="section-tag">Transfer · Screenshots</div>
+                    <h1>From install<br>to first transfer.</h1>
+                    <p>Five steps, five screens. No configuration overhead, no account setup for recipients.</p>
+                </div>
+
+                <div class="ss-grid">
+
+                    <div class="ss-item">
+                        <div class="ss-item-chrome">
+                            <div class="ss-item-chrome-dots"><span></span><span></span><span></span></div>
+                            <span class="ss-item-chrome-title">1 · Install</span>
+                        </div>
+                        <div class="ss-item-stage">
+                            <img src="assets/screenshots/transfer-install.png" alt="install.php — server requirements check">
+                        </div>
+                        <p class="ss-item-caption">Upload a single <code>install.php</code> to your webroot. It checks PHP version, ZipArchive, download capability and write permissions — then pulls the latest release directly from GitHub.</p>
+                    </div>
+
+                    <div class="ss-item">
+                        <div class="ss-item-chrome">
+                            <div class="ss-item-chrome-dots"><span></span><span></span><span></span></div>
+                            <span class="ss-item-chrome-title">2 · Setup</span>
+                        </div>
+                        <div class="ss-item-stage">
+                            <img src="assets/screenshots/transfer-setup.png" alt="Setup wizard">
+                        </div>
+                        <p class="ss-item-caption">A minimal setup wizard: choose a name, set your admin password and confirm the app URL. The upload directory is auto-detected — outside the webroot when possible, inside when not.</p>
+                    </div>
+
+                    <div class="ss-item">
+                        <div class="ss-item-chrome">
+                            <div class="ss-item-chrome-dots"><span></span><span></span><span></span></div>
+                            <span class="ss-item-chrome-title">3 · Dashboard</span>
+                        </div>
+                        <div class="ss-item-stage">
+                            <img src="assets/screenshots/transfer-dashboard.png" alt="Admin dashboard — transfers overview">
+                        </div>
+                        <p class="ss-item-caption">The admin dashboard lists all transfers with file name, size, creation date, expiry, download count and status. Revoke access or delete a transfer with a single click.</p>
+                    </div>
+
+                    <div class="ss-item">
+                        <div class="ss-item-chrome">
+                            <div class="ss-item-chrome-dots"><span></span><span></span><span></span></div>
+                            <span class="ss-item-chrome-title">4 · Share</span>
+                        </div>
+                        <div class="ss-item-stage">
+                            <img src="assets/screenshots/transfer-link.png" alt="Transfer created — download link">
+                        </div>
+                        <p class="ss-item-caption">After uploading, you get a secure download link with a 256-bit token. Copy it and send it — by email, chat, or any other channel. No account required for the recipient.</p>
+                    </div>
+
+                    <div class="ss-item">
+                        <div class="ss-item-chrome">
+                            <div class="ss-item-chrome-dots"><span></span><span></span><span></span></div>
+                            <span class="ss-item-chrome-title">5 · Download</span>
+                        </div>
+                        <div class="ss-item-stage">
+                            <img src="assets/screenshots/transfer-download.png" alt="Recipient download page">
+                        </div>
+                        <p class="ss-item-caption">Recipients see a clean, minimal page with the file name, size and expiry date. One button to download — no login, no ads, no tracking.</p>
+                    </div>
+
+                </div>
+
+                <div class="ss-cta">
+                    <div class="ss-cta-text">
+                        <h2>Ready to try it?</h2>
+                        <p>Download <code style="font-family:var(--font-mono);font-size:13px;background:var(--bg-surface);border:1px solid var(--border);border-radius:2px;padding:1px 5px;color:var(--accent)">install.php</code> and you're up in minutes.</p>
+                    </div>
+                    <div class="ss-cta-actions">
+                        <a href="https://github.com/jcapps-dev/jcapps-transfer/releases/latest/download/install.php" class="btn btn-primary btn-transfer">
+                            Download install.php
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        </a>
+                        <a href="https://github.com/jcapps-dev/jcapps-transfer" target="_blank" class="btn btn-ghost btn-sm">View source</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo" style="margin-bottom:8px">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                        JCApps
+                    </a>
+                    <p style="font-size:13px;color:var(--text-subtle)">Self-hosted tools that just work.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <div class="footer-col-title">Product</div>
+                        <a href="index.html#products">Transfer</a>
+                        <a href="screenshots.html">Screenshots</a>
+                        <a href="https://github.com/jcapps-dev/jcapps-transfer" target="_blank">Source</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-col-title">Company</div>
+                        <a href="impressum.html">Impressum</a>
+                        <a href="datenschutz.html">Datenschutz</a>
+                        <a href="mailto:hello@jcapps.dev">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 JCApps</span>
+                <div class="footer-bottom-links">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>
