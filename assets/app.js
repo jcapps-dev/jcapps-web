@@ -66,6 +66,47 @@ if (copyBtn) {
     });
 }
 
+// ─── SCREENSHOT GALLERY ───────────────────────────────────
+const galleryTrack  = document.getElementById('gallery-track');
+if (galleryTrack) {
+    const captions = [
+        'Upload a single <code>install.php</code> — checks requirements, pulls the latest release from GitHub, launches setup.',
+        'Set your admin password, app URL and upload directory. Done in under a minute.',
+        'All transfers at a glance — file, size, expiry, download count, status. Revoke or delete with one click.',
+        'After uploading you get a secure download link to copy and send. No account needed for the recipient.',
+        'Recipients see a minimal download page — no login, no friction. Just a button.',
+    ];
+    const labels   = document.querySelectorAll('.gallery-label');
+    const dots     = document.querySelectorAll('.gallery-dot');
+    const caption  = document.getElementById('gallery-caption');
+    const prevBtn  = document.getElementById('gallery-prev');
+    const nextBtn  = document.getElementById('gallery-next');
+    const total    = captions.length;
+    let current    = 0;
+
+    function goTo(idx) {
+        current = (idx + total) % total;
+        galleryTrack.style.transform = `translateX(-${current * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        labels.forEach((l, i) => l.classList.toggle('active', i === current));
+        caption.innerHTML = captions[current];
+        prevBtn.disabled = false;
+        nextBtn.disabled = false;
+    }
+
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+    dots.forEach(dot => dot.addEventListener('click', () => goTo(+dot.dataset.slide)));
+
+    // Swipe support
+    let startX = 0;
+    galleryTrack.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    galleryTrack.addEventListener('touchend',   e => {
+        const dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1);
+    }, { passive: true });
+}
+
 // ─── STAGGER PRODUCT CARDS ────────────────────────────────
 document.querySelectorAll('.products-grid .product-card, .philosophy-grid .philosophy-card').forEach((card, i) => {
     card.style.transitionDelay = `${i * 0.08}s`;

@@ -234,6 +234,47 @@
                 </div>
             </div>
 
+            <!-- GALLERY -->
+            <div class="gallery reveal">
+                <div class="gallery-chrome">
+                    <div class="gallery-chrome-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="gallery-chrome-labels" id="gallery-labels">
+                        <span class="gallery-label active">Install</span>
+                        <span class="gallery-label">Setup</span>
+                        <span class="gallery-label">Dashboard</span>
+                        <span class="gallery-label">Share</span>
+                        <span class="gallery-label">Download</span>
+                    </div>
+                </div>
+                <div class="gallery-stage">
+                    <div class="gallery-track" id="gallery-track">
+                        <div class="gallery-slide"><img src="assets/screenshots/transfer-install.png" alt="Installation" loading="lazy"></div>
+                        <div class="gallery-slide"><img src="assets/screenshots/transfer-setup.png" alt="Setup" loading="lazy"></div>
+                        <div class="gallery-slide"><img src="assets/screenshots/transfer-dashboard.png" alt="Dashboard" loading="lazy"></div>
+                        <div class="gallery-slide"><img src="assets/screenshots/transfer-link.png" alt="Share" loading="lazy"></div>
+                        <div class="gallery-slide"><img src="assets/screenshots/transfer-download.png" alt="Download" loading="lazy"></div>
+                    </div>
+                    <button class="gallery-arrow gallery-prev" id="gallery-prev" aria-label="Previous">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <button class="gallery-arrow gallery-next" id="gallery-next" aria-label="Next">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                </div>
+                <div class="gallery-footer">
+                    <p class="gallery-caption" id="gallery-caption">Upload a single <code>install.php</code> — checks requirements, pulls the latest release from GitHub, launches setup.</p>
+                    <div class="gallery-dots" id="gallery-dots">
+                        <button class="gallery-dot active" data-slide="0"></button>
+                        <button class="gallery-dot" data-slide="1"></button>
+                        <button class="gallery-dot" data-slide="2"></button>
+                        <button class="gallery-dot" data-slide="3"></button>
+                        <button class="gallery-dot" data-slide="4"></button>
+                    </div>
+                </div>
+            </div>
+
             <!-- ROADMAP -->
             <div class="roadmap-divider"><span>On the roadmap</span></div>
             <div class="products-grid">

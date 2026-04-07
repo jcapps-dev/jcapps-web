@@ -766,6 +766,156 @@ body::before {
     line-height: 1.7;
 }
 
+/* ─── GALLERY ────────────────────────────────────────────── */
+.gallery {
+    margin-top: 48px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--bg-card);
+}
+
+.gallery-chrome {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.gallery-chrome-dots {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+.gallery-chrome-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--border-strong);
+}
+
+.gallery-chrome-labels {
+    display: flex;
+    gap: 2px;
+    overflow: hidden;
+}
+.gallery-label {
+    padding: 3px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-subtle);
+    border-radius: 4px 4px 0 0;
+    transition: color var(--transition), background var(--transition);
+    white-space: nowrap;
+    cursor: default;
+}
+.gallery-label.active {
+    color: var(--text);
+    background: var(--bg-card);
+}
+
+.gallery-stage {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-surface);
+    height: 400px;
+}
+
+.gallery-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.gallery-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-slide img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition), opacity var(--transition);
+    opacity: 0.7;
+    z-index: 2;
+}
+.gallery-arrow:hover { background: var(--bg-card); color: var(--text); opacity: 1; }
+.gallery-arrow:disabled { opacity: 0.2; cursor: default; }
+.gallery-prev { left: 12px; }
+.gallery-next { right: 12px; }
+
+.gallery-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px 14px;
+    gap: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.gallery-caption {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    flex: 1;
+}
+.gallery-caption code {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 1px 5px;
+    color: var(--accent);
+}
+
+.gallery-dots {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+.gallery-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: none;
+    background: var(--border-strong);
+    cursor: pointer;
+    padding: 0;
+    transition: background var(--transition), transform var(--transition);
+}
+.gallery-dot.active {
+    background: var(--accent);
+    transform: scale(1.3);
+}
+
 /* ─── ROADMAP DIVIDER ────────────────────────────────────── */
 .roadmap-divider {
     display: flex;
