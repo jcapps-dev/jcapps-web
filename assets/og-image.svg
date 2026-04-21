@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <!-- left: logo mark -->
+  <rect x="80" y="175" width="280" height="280" fill="#f6f2e9" stroke="#111110" stroke-width="7"/>
+  <text x="102" y="390"
+    font-family="ui-monospace, 'Courier New', monospace"
+    font-weight="700"
+    font-size="160"
+    fill="#111110">jc</text>
+  <rect x="80" y="417" width="280" height="38" fill="#1f6e7a"/>
+  <!-- right: text -->
+  <text x="440" y="282"
+    font-family="system-ui, sans-serif"
+    font-weight="600"
+    font-size="52"
+    fill="#111110">jcapps.dev</text>
+  <text x="440" y="348"
+    font-family="system-ui, sans-serif"
+    font-weight="400"
+    font-size="28"
+    fill="#52524e">Self-hosted tools, no database required.</text>
+  <text x="440" y="400"
+    font-family="ui-monospace, monospace"
+    font-weight="400"
+    font-size="22"
+    fill="#1f6e7a">PHP · Flat JSON · MIT</text>
+</svg>
