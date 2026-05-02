@@ -445,18 +445,5 @@
   </footer>
 
 </div>
-<script>
-(function(){
-  fetch('https://api.github.com/repos/jcapps-dev/jcapps-transfer/releases/latest')
-    .then(function(r){ return r.json(); })
-    .then(function(d){
-      if(d.tag_name){
-        var el = document.getElementById('transfer-version');
-        if(el) el.textContent = d.tag_name.startsWith('v') ? d.tag_name : 'v' + d.tag_name;
-      }
-    })
-    .catch(function(){});
-})();
-</script>
 </body>
 </html>
