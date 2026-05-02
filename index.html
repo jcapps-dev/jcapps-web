@@ -374,14 +374,14 @@
 
     <!-- 1. Who -->
     <section class="section intro">
-      <p>I work at a German industrial supplier. Since late 2025 I've been building internal tools with <a href="https://claude.ai/code" target="_blank" rel="noopener noreferrer">Claude Code</a>. Three of them are in daily production use at my company. jcapps.dev is where they land when they're ready for others.</p>
+      <p>I work at a German industrial supplier. Since late 2025 I've been building internal tools with <a href="https://claude.ai/code" target="_blank" rel="noopener noreferrer">Claude Code</a>. Two of them are in daily production use; the others are in active internal testing. jcapps.dev is where they land when they're ready for others.</p>
     </section>
 
     <!-- 2. Transfer -->
     <section class="section">
       <div class="tool-head">
         <span class="tool-name">Transfer</span>
-        <span class="tool-version">v1.2.1</span>
+        <span class="tool-version" id="transfer-version">v1.2.2</span>
         <span class="tool-badge">Live</span>
       </div>
       <p class="tool-desc">
@@ -422,7 +422,7 @@
         <div class="upcoming-name">FMEA</div>
         <div class="upcoming-body">
           <div class="upcoming-desc">Process FMEA tool following VDA/AIAG 2019. Base → family → part inheritance, measures tracker, A3 print export.</div>
-          <div class="upcoming-status">Running internally</div>
+          <div class="upcoming-status">In active testing</div>
         </div>
       </div>
       <p style="margin-top: 16px; font-family: var(--mono); font-size: 12px; color: var(--text-3);">
@@ -445,5 +445,18 @@
   </footer>
 
 </div>
+<script>
+(function(){
+  fetch('https://api.github.com/repos/jcapps-dev/jcapps-transfer/releases/latest')
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if(d.tag_name){
+        var el = document.getElementById('transfer-version');
+        if(el) el.textContent = d.tag_name.startsWith('v') ? d.tag_name : 'v' + d.tag_name;
+      }
+    })
+    .catch(function(){});
+})();
+</script>
 </body>
 </html>
