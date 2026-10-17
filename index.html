@@ -31,6 +31,8 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/favicon-192.png">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0f0e" media="(prefers-color-scheme: dark)">
 
 <!-- Structured Data -->
 <script type="application/ld+json">
@@ -91,6 +93,10 @@
     --petrol-dk: #174e57;
     --petrol-bg: #f0fdfa;
     --petrol-bd: #99f6e4;
+    --ink:       #111110;
+    --ink-2:     #e8e8e5;
+    --ink-3:     #86867f;
+    --ink-dot:   #2c2c2a;
     --sans:      'IBM Plex Sans', system-ui, sans-serif;
     --mono:      'IBM Plex Mono', ui-monospace, monospace;
   }
@@ -285,6 +291,96 @@
   .btn-ghost { background: transparent; color: var(--text-2); border-color: var(--border); }
   .btn-ghost:hover { border-color: var(--text-3); color: var(--text); text-decoration: none; }
 
+  /* ── flow diagram ── */
+  .flow {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .flow-box { fill: var(--bg); stroke: var(--border); stroke-width: 1.5; }
+  .flow-box-accent { fill: var(--petrol-bg); stroke: var(--petrol-bd); stroke-width: 1.5; }
+  .flow-icon { color: var(--text-2); }
+  .flow-icon-accent { color: var(--petrol); }
+  .flow-line { stroke: var(--border); stroke-width: 1.5; }
+  .flow-chevron { fill: none; stroke: var(--text-3); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* labels rendered as HTML, not SVG text — stays legible at any viewport width */
+  .flow-labels {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+  .flow-label-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 0 4px;
+    text-align: center;
+  }
+  .flow-label-text {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--text-2);
+  }
+  .flow-sublabel-text {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--petrol);
+  }
+
+  /* ── screenshot proof ── */
+  .tool-shot {
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .tool-shot-label {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-3);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-2);
+  }
+  .tool-shot img { width: 100%; height: auto; display: block; }
+
+  /* ── terminal ── */
+  .term {
+    background: var(--ink);
+    margin-bottom: 20px;
+    overflow-x: auto;
+  }
+  .term-bar {
+    display: flex;
+    gap: 6px;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--ink-dot);
+  }
+  .term-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--ink-dot);
+  }
+  .term-body {
+    padding: 14px 16px;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    word-break: break-all;
+    color: var(--ink-2);
+  }
+  .term-prompt { color: var(--petrol-bd); }
+  .term-comment { color: var(--ink-3); }
+
   /* ── upcoming ── */
   .upcoming-row {
     display: grid;
@@ -362,6 +458,23 @@
     .header-links { gap: 12px; }
     .upcoming-row { grid-template-columns: 60px 1fr; }
   }
+
+  /* ── dark mode ── */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:        #0f0f0e;
+      --bg-2:      #1a1a19;
+      --border:    #2d2d2b;
+      --text:      #f3f3f0;
+      --text-2:    #b4b4ae;
+      --text-3:    #87877f;
+      --petrol:    #5eead4;
+      --petrol-dk: #2dd4bf;
+      --petrol-bg: #0d2e2a;
+      --petrol-bd: #155e56;
+    }
+    .btn-primary { color: #0f0f0e; }
+  }
 </style>
 </head>
 <body>
@@ -401,6 +514,52 @@
       <p class="tool-desc">
         Self-hosted file sharing. Upload a file, get a link, the recipient downloads without an account. Supports large files via chunked upload. It started because we didn't want someone else's branding on links going to customers.
       </p>
+
+      <svg class="flow" viewBox="0 0 640 48" role="img" aria-label="Upload, stored as a 256-bit token outside the webroot, becomes a link, recipient downloads it">
+        <!-- connectors -->
+        <line class="flow-line" x1="110" y1="24" x2="210" y2="24"/>
+        <line class="flow-line" x1="270" y1="24" x2="370" y2="24"/>
+        <line class="flow-line" x1="430" y1="24" x2="530" y2="24"/>
+        <path class="flow-chevron" d="M157,19 L163,24 L157,29"/>
+        <path class="flow-chevron" d="M317,19 L323,24 L317,29"/>
+        <path class="flow-chevron" d="M477,19 L483,24 L477,29"/>
+
+        <!-- 1. upload -->
+        <rect class="flow-box" x="56" y="0" width="48" height="48"/>
+        <g class="flow-icon" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" transform="translate(68,12)">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="17 8 12 3 7 8"/>
+          <line x1="12" y1="3" x2="12" y2="15"/>
+        </g>
+
+        <!-- 2. token (outside webroot) -->
+        <rect class="flow-box-accent" x="216" y="0" width="48" height="48"/>
+        <g class="flow-icon-accent" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" transform="translate(228,12)">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </g>
+
+        <!-- 3. link -->
+        <rect class="flow-box" x="376" y="0" width="48" height="48"/>
+        <g class="flow-icon" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" transform="translate(388,12)">
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+        </g>
+
+        <!-- 4. download -->
+        <rect class="flow-box" x="536" y="0" width="48" height="48"/>
+        <g class="flow-icon" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" transform="translate(548,12)">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </g>
+      </svg>
+      <div class="flow-labels">
+        <div class="flow-label-cell"><span class="flow-label-text">Upload</span></div>
+        <div class="flow-label-cell"><span class="flow-label-text">256-bit token</span><span class="flow-sublabel-text">outside webroot</span></div>
+        <div class="flow-label-cell"><span class="flow-label-text">Link</span></div>
+        <div class="flow-label-cell"><span class="flow-label-text">Download</span></div>
+      </div>
+
       <div class="spec-grid">
         <div class="spec-row"><span class="spec-k">Runtime</span><span class="spec-v">PHP 8+</span></div>
         <div class="spec-row"><span class="spec-k">Storage</span><span class="spec-v">Flat JSON</span></div>
@@ -409,6 +568,20 @@
         <div class="spec-row"><span class="spec-k">Auth</span><span class="spec-v">bcrypt + tokens</span></div>
         <div class="spec-row"><span class="spec-k">License</span><span class="spec-v">MIT</span></div>
       </div>
+
+      <div class="tool-shot">
+        <div class="tool-shot-label">After uploading</div>
+        <img src="assets/screenshots/transfer-link.png" alt="Transfer created — a secure download link with a 256-bit token, ready to copy and send">
+      </div>
+
+      <div class="term">
+        <div class="term-bar">
+          <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+        </div>
+        <div class="term-body"><span class="term-prompt">$</span> curl -LO https://github.com/jcapps-dev/jcapps-transfer/releases/latest/download/install.php
+<span class="term-comment"># upload it to your webroot, open it in the browser — the wizard does the rest</span></div>
+      </div>
+
       <div class="actions">
         <a class="btn btn-primary" href="https://github.com/jcapps-dev/jcapps-transfer/releases/latest/download/install.php" target="_blank" rel="noopener noreferrer">↓ Download install.php</a>
         <a class="btn btn-ghost" href="https://github.com/jcapps-dev/jcapps-transfer" target="_blank" rel="noopener noreferrer">Source</a>
