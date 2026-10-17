@@ -13,8 +13,9 @@
 <meta property="og:url" content="https://jcapps.dev/">
 <meta property="og:title" content="jcapps.dev — Self-hosted tools, no database required">
 <meta property="og:description" content="Self-hosted tools built for daily use at a German industrial supplier. PHP, no database, no dependencies.">
-<meta property="og:image" content="https://jcapps.dev/assets/og-image.svg">
+<meta property="og:image" content="https://jcapps.dev/assets/og-image.png">
 <meta property="og:image:width" content="1200">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="jcapps">
 <meta property="og:locale" content="en_US">
@@ -23,11 +24,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="jcapps.dev — Self-hosted tools, no database required">
 <meta name="twitter:description" content="Self-hosted tools built for daily use at a German industrial supplier. PHP, no database, no dependencies.">
-<meta name="twitter:image" content="https://jcapps.dev/assets/og-image.svg">
+<meta name="twitter:image" content="https://jcapps.dev/assets/og-image.png">
 
 <link rel="preload" href="assets/fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/ibm-plex-sans-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/favicon-192.png">
 
 <!-- Structured Data -->
 <script type="application/ld+json">
@@ -94,6 +97,15 @@
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { font-size: 16px; }
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
   body {
     font-family: var(--sans);
     background: var(--bg);
@@ -372,6 +384,8 @@
 
   <main>
 
+    <h1 class="visually-hidden">jcapps.dev — Self-hosted tools, no database required</h1>
+
     <!-- 1. Who -->
     <section class="section intro">
       <p>I work at a German industrial supplier. Since late 2025 I've been building internal tools with <a href="https://claude.ai/code" target="_blank" rel="noopener noreferrer">Claude Code</a>. Two of them are in daily production use; the others are in active internal testing. jcapps.dev is where they land when they're ready for others.</p>
@@ -380,7 +394,7 @@
     <!-- 2. Transfer -->
     <section class="section">
       <div class="tool-head">
-        <span class="tool-name">Transfer</span>
+        <h2 class="tool-name">Transfer</h2>
         <span class="tool-version" id="transfer-version">v1.3.1</span>
         <span class="tool-badge">Live</span>
       </div>
@@ -398,7 +412,7 @@
       <div class="actions">
         <a class="btn btn-primary" href="https://github.com/jcapps-dev/jcapps-transfer/releases/latest/download/install.php" target="_blank" rel="noopener noreferrer">↓ Download install.php</a>
         <a class="btn btn-ghost" href="https://github.com/jcapps-dev/jcapps-transfer" target="_blank" rel="noopener noreferrer">Source</a>
-        <a class="btn btn-ghost" href="screenshots.html">Screenshots</a>
+        <a class="btn btn-ghost" href="/screenshots">Screenshots</a>
       </div>
     </section>
 
@@ -439,8 +453,8 @@
       <a href="mailto:hello@jcapps.dev">hello@jcapps.dev</a>
     </div>
     <div class="footer-right">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz">Datenschutz</a>
     </div>
   </footer>
 
