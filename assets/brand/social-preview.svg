@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <rect width="1280" height="640" fill="#ffffff"/>
+  <!-- left: icon tile -->
+  <rect x="100" y="190" width="260" height="260" fill="#111110"/>
+  <path d="M179,255 L232,320 L179,385" fill="none" stroke="#99f6e4" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="265" y="347" width="60" height="27" fill="#99f6e4"/>
+  <!-- right: text -->
+  <text x="420" y="300"
+    font-family="ui-monospace, 'Courier New', monospace"
+    font-weight="700"
+    font-size="64"
+    fill="#111110">jcapps</text>
+  <text x="420" y="350"
+    font-family="system-ui, sans-serif"
+    font-weight="400"
+    font-size="26"
+    fill="#52524e">Self-hosted tools, no database required.</text>
+  <text x="420" y="392"
+    font-family="ui-monospace, monospace"
+    font-weight="400"
+    font-size="22"
+    fill="#1f6e7a">PHP · Flat JSON · MIT</text>
+</svg>

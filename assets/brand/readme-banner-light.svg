@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280">
+  <!-- icon tile -->
+  <rect x="40" y="30" width="220" height="220" fill="#111110"/>
+  <path d="M108.75,98.75 L154.8,140 L108.75,181.25" fill="none" stroke="#99f6e4" stroke-width="20.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="177.5" y="162.7" width="50.2" height="22.7" fill="#99f6e4"/>
+  <!-- wordmark -->
+  <text x="300" y="172"
+    font-family="ui-monospace, 'Courier New', monospace"
+    font-weight="700"
+    font-size="96"
+    fill="#111110"
+    letter-spacing="-2">jcapps</text>
+  <text x="302" y="212"
+    font-family="system-ui, sans-serif"
+    font-weight="400"
+    font-size="26"
+    fill="#52524e">Self-hosted tools, no database required.</text>
+</svg>
