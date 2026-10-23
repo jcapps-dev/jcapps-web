@@ -16,12 +16,12 @@ Upload: pro Repo unter Settings → "Social preview" → `social-preview.png`. A
 
 ## README-Header/Banner
 
-`readme-banner-light.svg` + `readme-banner-dark.svg` (PNG-Fallbacks: `-light.png` / `-dark.png`, 2400×560, 2×-Dichte) — horizontales Logo-Lockup mit Schriftzug, für den Kopf der README-Dateien. Passt sich automatisch an GitHubs Light/Dark-Theme an:
+`readme-banner-light.svg` + `readme-banner-dark.svg` (PNG: `-light.png` / `-dark.png`, 1760×480, 2×-Dichte) — horizontales Logo-Lockup mit Schriftzug, für den Kopf der README-Dateien. Passt sich automatisch an GitHubs Light/Dark-Theme an:
 
 ```html
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://jcapps.dev/assets/brand/readme-banner-dark.svg">
-  <img src="https://jcapps.dev/assets/brand/readme-banner-light.svg" alt="jcapps" width="600">
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/banner-dark.png">
+  <img src=".github/assets/banner-light.png" alt="jcapps" width="440">
 </picture>
 ```
 
@@ -30,3 +30,9 @@ Der Dark-Banner hat eine dünne Petrol-Outline um die Icon-Kachel, weil deren ei
 ## Konsistenz
 
 Alle Dateien nutzen dieselben festen Farben wie der Header-Mark auf jcapps.dev (`#111110` / `#99f6e4`), nicht die hell/dunkel-wechselnden CSS-Tokens der Website — das Mark soll unabhängig vom jeweiligen Kontext (GitHub-Theme, Browser-Tab) gleich aussehen.
+
+## Schrift & Neu-Erzeugung
+
+Schriftzug in **IBM Plex Mono 500**, Unterzeile in **IBM Plex Sans 400** — dieselben Schriften wie auf jcapps.dev. Die Schriften sind als base64-woff2 **ins SVG eingebettet**, damit das Logo überall gleich aussieht (GitHub zeigt SVGs als `<img>`; Systemschriften würden je nach Rechner abweichen).
+
+In den READMEs die **PNGs** verwenden und die Dateien ins jeweilige Repo unter `.github/assets/` legen (so hängt die README nicht von der Website ab). Neu erzeugen: `python3 generate.py <ausgabe-ordner>` erzeugt die SVGs; PNGs per Headless-Chrome mit 2× Dichte (Banner) bzw. 1× (Social Preview) rendern.
