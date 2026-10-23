@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Transfer — Screenshots · jcapps.dev</title>
-<meta name="description" content="Screenshots of jcapps-transfer — install, setup, admin dashboard, sharing and recipient download page.">
+<meta name="description" content="Screenshots of jcapps-transfer — install, setup, admin dashboard, new transfer, sharing, recipient download page, private storage and branding.">
 <link rel="canonical" href="https://jcapps.dev/screenshots">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
@@ -112,38 +112,56 @@
   </a>
 
   <h1 class="page-title">Transfer — Screenshots</h1>
-  <p class="page-sub">From install to first transfer. Five steps, five screens.</p>
+  <p class="page-sub">From install to the recipient’s download — and everything in between.</p>
 
   <div class="ss-grid">
 
     <div class="ss-item">
       <div class="ss-item-label">1 · Install</div>
-      <img src="assets/screenshots/transfer-install.png" alt="install.php — server requirements check">
+      <img src="assets/screenshots/transfer-install.png" alt="install.php — server requirements check" loading="lazy">
       <p class="ss-item-caption">Upload a single <code>install.php</code> to your webroot. It checks PHP version, ZipArchive, download capability and write permissions — then pulls the latest release directly from GitHub.</p>
     </div>
 
     <div class="ss-item">
       <div class="ss-item-label">2 · Setup</div>
-      <img src="assets/screenshots/transfer-setup.png" alt="Setup wizard">
+      <img src="assets/screenshots/transfer-setup.png" alt="Setup wizard — app name, admin password, URL and upload directory" loading="lazy">
       <p class="ss-item-caption">A minimal setup wizard: choose a name, set your admin password and confirm the app URL. The upload directory is auto-detected — outside the webroot when possible, inside when not.</p>
     </div>
 
     <div class="ss-item">
       <div class="ss-item-label">3 · Dashboard</div>
-      <img src="assets/screenshots/transfer-dashboard.png" alt="Admin dashboard — transfers overview">
-      <p class="ss-item-caption">The admin dashboard lists all transfers with file name, size, creation date, expiry, download count and status. Revoke access or delete a transfer with a single click.</p>
+      <img src="assets/screenshots/transfer-dashboard.png" alt="Admin dashboard — transfers overview with status and storage usage" loading="lazy">
+      <p class="ss-item-caption">Every transfer at a glance: files, size, creation date, expiry, downloads and status — plus storage usage for transfers and private storage. Copy the link, revoke access or delete with an inline confirmation.</p>
     </div>
 
     <div class="ss-item">
-      <div class="ss-item-label">4 · Share</div>
-      <img src="assets/screenshots/transfer-link.png" alt="Transfer created — download link">
-      <p class="ss-item-caption">After uploading, you get a secure download link with a 256-bit token. Copy it and send it — by email, chat, or any other channel. No account required for the recipient.</p>
+      <div class="ss-item-label">4 · New transfer</div>
+      <img src="assets/screenshots/transfer-upload.png" alt="New transfer — files, optional password, download limit and expiry" loading="lazy">
+      <p class="ss-item-caption">Drop up to 10 files — uploaded in chunks, so large transfers work even on shared hosting (1 GB by default, configurable). Optionally protect the link with a password, limit the number of downloads and pick an expiry — 1, 7, 14 or 30 days, or any value up to a year.</p>
     </div>
 
     <div class="ss-item">
-      <div class="ss-item-label">5 · Download</div>
-      <img src="assets/screenshots/transfer-download.png" alt="Recipient download page">
-      <p class="ss-item-caption">Recipients see a clean, minimal page with the file name, size and expiry date. One button to download — no login, no ads, no tracking.</p>
+      <div class="ss-item-label">5 · Share</div>
+      <img src="assets/screenshots/transfer-link.png" alt="Transfer created — short download link and one-time password display" loading="lazy">
+      <p class="ss-item-caption">You get a short link backed by a 256-bit token — send it by email, chat or any other channel. The password is shown once, so you can pass it on separately. No account required for the recipient.</p>
+    </div>
+
+    <div class="ss-item">
+      <div class="ss-item-label">6 · Download</div>
+      <img src="assets/screenshots/transfer-download.png" alt="Recipient download page with company logo, file list and legal links" loading="lazy">
+      <p class="ss-item-caption">Recipients see a calm page in your branding: your logo, every file with type and size, expiry and remaining downloads, and your legal notice and privacy links. Shown in German or English, based on the recipient’s browser. No login, no ads, no tracking.</p>
+    </div>
+
+    <div class="ss-item">
+      <div class="ss-item-label">7 · Storage</div>
+      <img src="assets/screenshots/transfer-storage.png" alt="Private storage — files kept for the admin, downloadable directly" loading="lazy">
+      <p class="ss-item-caption">A private storage area for yourself: upload files and download them directly — no link, no expiry. Handy for documents you need on the road.</p>
+    </div>
+
+    <div class="ss-item">
+      <div class="ss-item-label">8 · Branding</div>
+      <img src="assets/screenshots/transfer-settings.png" alt="Settings — app name, company name, footer, legal links and logo" loading="lazy">
+      <p class="ss-item-caption">Set your company name, footer text, legal notice and privacy policy URLs and upload your logo. Everything appears on the download and login pages — no code changes needed.</p>
     </div>
 
   </div>
